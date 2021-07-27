@@ -49,47 +49,44 @@ del @third
 del #3
 ```
 * Save a sequence by @name or by #id to a file with .rawdna suffix with a given filename or a default one:
-
   
  ```python
-save @second newfile.rawdna    #(this will create a file named newfile.rawdna)
+save @second newfile.rawdna    # this will create a file named newfile.rawdna
  ```
-   (these will create a file named first.rawdna (default name))
- ```python
+ ```python 
+ # these will create a file named first.rawdna (default name)
 save #1 
 save @second
 ```
 * Replace the letter in the (0-based) index of @seq_name/#seq_id by <new_letter>.
   if the command ends with : @@ or : @new_name the replaced sequence will get default / new_name name
 
-  (this will create a sequence named new_name)
  ```python
-replace @first 0 T : @new_name
+replace @first 0 T : @new_name   #this will create a sequence named new_name
+
  ```
-  (this will create a sequence named first_r1 (default name))
+ 
  ```python
-replace @first 0 T : @@
+replace @first 0 T : @@  #this will create a sequence named first_r1 (default name)
  ```
-  (this will change the @name sequence itself)
  ```python
-replace @first 0 T
+replace @first 0 T  # this will change the @name sequence itself
 ```
 * Create sequence @seq_name/#seq_id with its pair sequence, 
 that is, each T is replaced by an A (and vice versa), and each 
 C is replaced by a G (and vice versa). if the command ends 
 with : @@ or : @new_name the replaced sequence will get default / new_name name
 
-  (this will create a sequence named new_name)
  ```python
-pair @first : @new_name
+pair @first : @new_name  # this will create a sequence named new_name
  ```
-  (this will create a sequence named first_p1 (default name))
+ 
  ```python
-pair @first : @@
+pair @first : @@  # this will create a sequence named first_p1 (default name)
  ```
-  (this will change the @name sequence itself)
  ```python
-pair @first
+pair @first  # this will change the @name sequence itself
+
 ```
 * Get into batch mode - every command that is entered in batch mode wil be saved in the batch and will run by running the batch:
  ```python
@@ -97,7 +94,7 @@ batch batch_name
 ```
 * Finish batch mode:
  ```python
-end@
+end
 ```
 * Get the list of existing batches:
  ```python
@@ -113,14 +110,13 @@ batchsave @batch_name file_name.dnabatch
 ```
 * Load file_name.dnabatch into batch_name batch if given,
   otherwise batch name will be file_name:
-
-  (this will create a batch called batch_name)
+  
  ```python
-batchload file_name.dnabatch : @batch_name
+batchload file_name.dnabatch : @batch_name  # this will create a batch called batch_name
  ```
-  (this will create a batch called file_name)
+ 
  ```python
-batchload file_name.dnabatch
+batchload file_name.dnabatch  # this will create a batch called file_name
 ```
 * Run batch_name batch:
 ```python
