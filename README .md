@@ -49,10 +49,13 @@ del @third
 del #3
 ```
 * Save a sequence by @name or by #id to a file with .rawdna suffix with a given filename or a default one:
- ```python
+
 #this will create a file named newfile.rawdna:
+ ```python
 save @second newfile.rawdna
+ ```
 #these will create a file named first.rawdna (default name):
+ ```python
 save #1 
 save @second
 ```
