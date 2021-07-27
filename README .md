@@ -9,9 +9,8 @@ and then use one or more of the following commands:
 ```python
 new ATC @first
 ```
-* 1. Duplicate a sequence with name first:
-  2. Duplicate a sequence with id number 1:
-
+* Duplicate a sequence with name first or id number 1:
+  
 ```python
 dup @first  or  dup #1
 ```
